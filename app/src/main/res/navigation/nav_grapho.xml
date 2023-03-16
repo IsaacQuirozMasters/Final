@@ -1,0 +1,25 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grapho"
+    android:label="Top Rated"
+    app:startDestination="@id/homeTopRated">
+    <fragment
+        android:id="@+id/homeTopRated"
+        android:name="com.example.testandroid.ui.viewest.ViewestFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_viewest">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.testandroid.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movie"
+            app:argType="com.example.testandroid.data.entities.MovieEntity" />
+    </fragment>
+</navigation>
